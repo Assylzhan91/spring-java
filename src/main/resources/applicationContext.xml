@@ -5,7 +5,8 @@
     http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="testBean" class="kz.spring.assylzhan.TestBean">
-        <constructor-arg value="Assylzhan1" />
+    <bean id="musicBean" class="kz.spring.assylzhan.RockMusic" />
+    <bean id="musicPlayer" class="kz.spring.assylzhan.MusicPlayer">
+        <constructor-arg ref="musicBean"/>
     </bean>
 </beans>
