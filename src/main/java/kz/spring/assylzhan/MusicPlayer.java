@@ -4,7 +4,7 @@ package kz.spring.assylzhan;
  * @Assylzhan Baimuratov
  **/
 public class MusicPlayer {
-    private Music music;
+    private final Music music;
     public MusicPlayer(Music music) {
         this.music = music;
     }
