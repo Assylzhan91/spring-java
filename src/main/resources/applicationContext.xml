@@ -12,7 +12,7 @@
 
     <bean id="musicBean" class="kz.spring.assylzhan.RockMusic" />
 
-    <bean id="musicPlayer" class="kz.spring.assylzhan.MusicPlayer">
+    <bean id="musicPlayer" class="kz.spring.assylzhan.MusicPlayer" scope="prototype">
         <property name="music" ref="musicBean"/>
         <property name="songName" value="${musicPlayer.name}"/>
         <property name="volume" value="${musicPlayer.volume}"/>
