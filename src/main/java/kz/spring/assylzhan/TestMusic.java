@@ -10,10 +10,11 @@ public class TestMusic {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         //Music music = context.getBean("musicBean", Music.class);
         //MusicPlayer musicPlayer = new MusicPlayer(music);
-        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
-        System.out.println(musicPlayer.getSongName());
-        System.out.println(musicPlayer.getVolume());
-        musicPlayer.playMusic();
+        MusicPlayer musicPlayer1 = context.getBean("musicPlayer", MusicPlayer.class);
+        MusicPlayer musicPlayer2 = context.getBean("musicPlayer", MusicPlayer.class);
+        musicPlayer1.setSongName("Second song ");
+        System.out.println(musicPlayer1.getSongName());
+        System.out.println(musicPlayer2.getSongName());
         context.close();
     }
 
