@@ -12,7 +12,7 @@ public class TestMusic {
         //MusicPlayer musicPlayer = new MusicPlayer(music);
         MusicPlayer musicPlayer1 = context.getBean("musicPlayer", MusicPlayer.class);
         MusicPlayer musicPlayer2 = context.getBean("musicPlayer", MusicPlayer.class);
-        musicPlayer1.setSongName("Second song ");
+        musicPlayer1.setSongName("Second song1");
         System.out.println(musicPlayer1.getSongName());
         System.out.println(musicPlayer2.getSongName());
         context.close();
