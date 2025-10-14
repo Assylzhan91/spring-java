@@ -8,13 +8,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class TestMusic {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        //Music music = context.getBean("musicBean", Music.class);
-        //MusicPlayer musicPlayer = new MusicPlayer(music);
-        MusicPlayer musicPlayer1 = context.getBean("musicPlayer", MusicPlayer.class);
-        MusicPlayer musicPlayer2 = context.getBean("musicPlayer", MusicPlayer.class);
-        musicPlayer1.setSongName("Second song1");
-        System.out.println(musicPlayer1.getSongName());
-        System.out.println(musicPlayer2.getSongName());
+        Music rockMusic = context.getBean("rockMusic", RockMusic.class);
+        Music classicalMusic = context.getBean("classicalMusic", ClassicalMusic.class);
+        System.out.println(rockMusic.getSong());
+        System.out.println(classicalMusic.getSong());
+        
         context.close();
     }
 
