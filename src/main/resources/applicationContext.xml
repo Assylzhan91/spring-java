@@ -8,14 +8,7 @@
     http://www.springframework.org/schema/context
     https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="musicPlayer.properties"/>
+    <context:component-scan base-package="kz.spring.assylzhan"/>
 
-    <bean id="musicBean" class="kz.spring.assylzhan.RockMusic" />
-
-    <bean id="musicPlayer" class="kz.spring.assylzhan.MusicPlayer" scope="prototype">
-        <property name="music" ref="musicBean"/>
-        <property name="songName" value="${musicPlayer.name}"/>
-        <property name="volume" value="${musicPlayer.volume}"/>
-    </bean>
 
 </beans>
