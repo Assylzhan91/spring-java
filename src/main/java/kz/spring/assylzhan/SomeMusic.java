@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 /**
  * @Assylzhan Baimuratov
  **/
-@Component
 public class SomeMusic implements Music {
 
     private SomeMusic() {

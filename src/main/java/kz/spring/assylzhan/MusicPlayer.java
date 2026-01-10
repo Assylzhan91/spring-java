@@ -1,39 +1,25 @@
 package kz.spring.assylzhan;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
 /**
  * @Assylzhan Baimuratov
  **/
+@Component
 public class MusicPlayer {
-    private Music music;
-    private String songName;
-    private int volume;
 
-    public String getSongName() {
-        return songName;
+    private RockMusic rockMusic;
+    private ClassicalMusic classicalMusic;
+
+    public MusicPlayer(RockMusic rockMusic, ClassicalMusic classicalMusic) {
+         this.rockMusic = rockMusic;
+         this.classicalMusic = classicalMusic;
     }
 
-    public void setSongName(final String songName) {
-        this.songName = songName;
+    public String playMusic() {
+        return classicalMusic.getSong();
     }
 
-    public int getVolume() {
-        return volume;
-    }
-
-    public void setVolume(final int volume) {
-        this.volume = volume;
-    }
-
-    public MusicPlayer(Music music) {
-        this.music = music;
-    }
-
-    public MusicPlayer() {}
-
-    public void playMusic() {
-        System.out.println("Playing: " + music.getSong());
-    }
-    public void setMusic(Music music) {
-        this.music = music;
-    }
 }
